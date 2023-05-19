@@ -1,8 +1,8 @@
 import Home from "../Home";
-import Login from "../Login";
 import Create from "../user/Create";
 import { createBrowserRouter } from "react-router-dom";
-
+import PagePost from "../pagePost";
+import PageCreate from "../pageCreate";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +18,7 @@ const router = createBrowserRouter([
         path: "/Create",
         element: <Create />,
     },
+
 
 
 
