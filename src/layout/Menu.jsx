@@ -14,6 +14,7 @@ function Menu() {
             </div>
             <div className="row mt-5 ">
                 <Link className="align a" to="/Post"><Button className="w-75" variant="warning">Post</Button>{' '}</Link>
+                <Link className="align a" to="/Create"><Button className="w-75" variant="warning">Inscription</Button>{' '}</Link>
             </div>
 
             <div className="row mt-5 ">
