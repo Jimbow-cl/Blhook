@@ -24,7 +24,7 @@ function PagePost() {
                 <div className='col-10 bkgColorBisque'>
                     <div className="row lh-50"></div>
                     <div className="row lh-50 roboto36 align "> Post'Book</div>
-
+                    <div className="row lh-50"></div>
                     <div className="row h-100">
                         <Post />
                     </div>

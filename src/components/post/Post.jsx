@@ -1,5 +1,9 @@
 import ModelsPost from "../../models/ModelsPost";
 import { useState, useEffect } from "react";
+import moment from "moment";
+import 'moment/dist/locale/fr';
+import 'moment/locale/fr';
+
 
 
 function Post() {
@@ -22,7 +26,7 @@ function Post() {
 
             return (
                 <div>
-                    <ModelsPost key={id} title={item.title} post={item.content} lastname={item.lastname} />
+                    <ModelsPost key={id} title={item.title} post={item.content} lastname={item.lastname} date={moment(item.date).format("LL")} />
                 </div>
             );
         }
@@ -31,7 +35,7 @@ function Post() {
 
     };
     return (
-        <div className='d-flex '> <RenderMyArray /></div>
+        <div className='d-flex align'> <RenderMyArray /></div>
 
     );
 

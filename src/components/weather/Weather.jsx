@@ -1,4 +1,4 @@
-import Models from "../../models/models";
+import ModelsMeteo from "../../models/ModelsMeteo";
 import { useState, useEffect } from "react";
 
 function Meteo() {
@@ -22,7 +22,7 @@ function Meteo() {
 
             return (
                 <div>
-                    <Models key={id} dt_txt={item.dt_txt} description={item.weather[0].description} visibility={item.visibility} icon={item.weather[0].icon} temp_min={item.main.temp_min} temp_max={item.main.temp_max} speed={item.wind.speed} />
+                    <ModelsMeteo key={id} dt_txt={item.dt_txt} description={item.weather[0].description} visibility={item.visibility} icon={item.weather[0].icon} temp_min={item.main.temp_min} temp_max={item.main.temp_max} speed={item.wind.speed} />
                 </div>
             );
         }

@@ -11,7 +11,7 @@ function ModelsPost(props) {
                 <Card.Text>
                     {props.post}
                 </Card.Text>
-                <Card.Footer className="text-muted">Message de {props.lastname}</Card.Footer>
+                <Card.Footer className="text-muted">Message de {props.lastname} le {props.date}</Card.Footer>
             </Card.Body>
         </Card>
     )

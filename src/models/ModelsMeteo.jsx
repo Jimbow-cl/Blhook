@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 
 
-function Models(props) {
+function ModelsMeteo(props) {
     let time = `Météo  du : ${props.dt_txt}`
     let image = `https://openweathermap.org/img/wn/${props.icon}.png`
 
@@ -32,4 +32,4 @@ function Models(props) {
 
 }
 
-export default Models
+export default ModelsMeteo
