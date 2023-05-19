@@ -23,6 +23,18 @@ function Menu() {
             <div className="row mt-5 ">
                 <Link className="align a" to="/Disconnect"><Button className="w-75" variant="danger">Déconnexion</Button>{' '}</Link>
             </div>
+            <div className="row mt-5 ">
+            </div>
+            <div className="row mt-5 ">
+            </div>
+            <div className="row mt-5 ">
+            </div>
+            <div className="row mt-5 ">
+            </div>
+
+            <div className="row mt-5 ">
+                <Link className="align a" to="/Disconnect"><Button className="w-75" variant="info">Nous contacter</Button>{' '}</Link>
+            </div>
 
         </nav>
     )

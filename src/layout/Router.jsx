@@ -30,6 +30,11 @@ const router = createBrowserRouter([
         path: "/Profil",
         element: <PagePost />,
     },
+    {
+        path: "/Contact",
+        element: <PagePost />,
+    },
+
 
 
 ])
