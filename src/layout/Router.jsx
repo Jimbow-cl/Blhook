@@ -18,6 +18,18 @@ const router = createBrowserRouter([
         element: <PagePost />,
     },
 
+    {
+        path: "/Connect",
+        element: <PagePost />,
+    },
+    {
+        path: "/Disconnect",
+        element: <PagePost />,
+    },
+    {
+        path: "/Profil",
+        element: <PagePost />,
+    },
 
 
 ])

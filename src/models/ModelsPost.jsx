@@ -4,15 +4,14 @@ function ModelsPost(props) {
 
     return (
 
-        <Card body style={{ width: '400px' }}>
-
-            <Card.Img variant="top" src='./public/logo/logoBlhook.png' />
+        <Card className="align" body style={{ width: '400px' }}>
+            <Card.Title>{props.title}</Card.Title>
+            <Card.Img variant="top" style={{ width: '150px' }} src='./public/logo/logoBlhook.png' />
             <Card.Body>
-                <Card.Title>Card Title</Card.Title>
                 <Card.Text>
                     {props.post}
                 </Card.Text>
-                <Card.Footer className="text-muted">page {props.page} sur {props.totalPages}</Card.Footer>
+                <Card.Footer className="text-muted">Message de {props.lastname}</Card.Footer>
             </Card.Body>
         </Card>
     )

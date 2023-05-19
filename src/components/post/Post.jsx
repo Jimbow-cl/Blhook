@@ -11,27 +11,23 @@ function Post() {
         let response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/theBlhook/posts?page=0&limit=20`);
         console.log('reponse post', response);
         let donnees = await response.json();
-        console.log('données post', donnees.list);
-        setPost(donnees.list)
+        console.log('données post', donnees.posts);
+        setPost(donnees.posts);
 
     }
     useEffect(() => { Post1() }, []);
     const RenderMyArray = () => {
-        if (post == null) {
-            return (
-                <p>Il n'y a pas de post pour l'instant</p>)
-        }
-        else {
-            return post.map((item, id) => {
 
-                return (
-                    <div>
-                        <ModelsPost key={id} post={item.posts} page={item.page} totalPages={item.totalPages} />
-                    </div>
-                );
-            }
+        return post.map((item, id) => {
+
+            return (
+                <div>
+                    <ModelsPost key={id} title={item.title} post={item.content} lastname={item.lastname} />
+                </div>
             );
-        };
+        }
+        );
+
 
     };
     return (

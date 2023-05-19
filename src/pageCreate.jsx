@@ -23,7 +23,7 @@ function PageCreate() {
                 {/*Colonne de Droite, Contenu*/}
                 <div className='col-10 bkgColorBisque'>
                     <div className="row lh-50"></div>
-                    <div className="row lh-50">Creer un compte</div>
+                    <div className="row lh-50 roboto36 align">Créer un compte</div>
 
                     <div className="row h-100">
                         <Create />
