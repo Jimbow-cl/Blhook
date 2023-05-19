@@ -1,9 +1,9 @@
-import Menu from "./layout/Menu"
-import Meteo from "./components/weather/Weather";
+import Menu from "./layout/Menu";
 import Header from "./models/Header";
+import Create from "./user/Create";
 
 
-function Home() {
+function PageCreate() {
 
 
     return (
@@ -23,10 +23,11 @@ function Home() {
                 {/*Colonne de Droite, Contenu*/}
                 <div className='col-10 bkgColorBisque'>
                     <div className="row lh-50"></div>
-                    <div className="row lh-50"></div>
+                    <div className="row lh-50">Creer un compte</div>
 
                     <div className="row h-100">
-                        <Meteo />
+                        <Create />
+
                     </div>
                 </div>
             </div>
@@ -34,4 +35,4 @@ function Home() {
     )
 }
 
-export default Home
+export default PageCreate

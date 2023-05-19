@@ -10,9 +10,9 @@ function Meteo() {
         let response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=43.70&lon=7.27&units=metric&lang=fr&appid=48e51318a2fe8630fa5b92fae26ea42b
 
         `);
-        console.log('reponse', response);
+        console.log('reponse meteo', response);
         let donnees = await response.json();
-        console.log('données', donnees.list);
+        console.log('données meteo', donnees.list);
         setMeteo(donnees.list)
 
     }

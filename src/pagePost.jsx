@@ -1,9 +1,9 @@
 import Menu from "./layout/Menu"
-import Meteo from "./components/weather/Weather";
 import Header from "./models/Header";
+import Post from "./components/post/Post";
 
 
-function Home() {
+function PagePost() {
 
 
     return (
@@ -23,10 +23,10 @@ function Home() {
                 {/*Colonne de Droite, Contenu*/}
                 <div className='col-10 bkgColorBisque'>
                     <div className="row lh-50"></div>
-                    <div className="row lh-50"></div>
+                    <div className="row lh-50"> Post'Book</div>
 
                     <div className="row h-100">
-                        <Meteo />
+                        <Post />
                     </div>
                 </div>
             </div>
@@ -34,4 +34,4 @@ function Home() {
     )
 }
 
-export default Home
+export default PagePost
