@@ -1,0 +1,26 @@
+.conditions {
+    font-size: 60%;
+}
+
+.logo {
+    display: flex;
+    margin: 4% 3% 4% 33%;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.margin{
+    margin-bottom: 2%;
+}
+.btnenvoyer{
+    display: flex;
+    margin: 0% 0% 0% 38%;
+}
+
+.container {
+    margin: 0% 0% 0% 38%;
+    border-width: 10%;
+}

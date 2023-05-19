@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+
 function Menu() {
+
 
     return (
         <nav>
@@ -11,7 +13,7 @@ function Menu() {
                 <Link className="align a" to="/Login"><Button className="w-75" variant="warning">Login</Button>{' '}</Link>
             </div>
             <div className="row mt-5 ">
-                <Link className="align a" to="/Login"><Button className="w-75" variant="warning">Login</Button>{' '}</Link>
+                <Link className="align a" to="/Create"><Button className="w-75" variant="warning">Inscription</Button>{' '}</Link>
             </div>
             <div className="row mt-5 ">
                 <Link className="align a" to="/Login"><Button className="w-75" variant="warning">Login</Button>{' '}</Link>
