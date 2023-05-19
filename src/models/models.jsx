@@ -8,7 +8,7 @@ function Models(props) {
     return (
         <div  >
 
-            <Card >
+            <Card style={{ width: '18rem' }} >
                 <Card.Img variant="top" className="weather" src={image} />
                 <Card.Body>
                     <Card.Title>{time}</Card.Title>
