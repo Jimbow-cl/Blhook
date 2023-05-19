@@ -63,8 +63,5 @@ function Create() {
 
 }
 
-export default Createfunction Create() {
-
-}
 
 export default Create
