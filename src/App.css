@@ -1,0 +1,81 @@
+/* Roboto:*/
+.roboto48 {
+    font-size: 48px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+
+}
+
+.roboto36 {
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.roboto36bold {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.roboto20 {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.roboto20bold {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* Taille */
+.lh-50 {
+    height: 50px;
+}
+
+.lh-41 {
+    height: 41px;
+}
+
+.h945 {
+    height: 94.5vh;
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+}
+
+/* Color*/
+.bkgColorBlack {
+    background-color: black;
+}
+
+.bkgColorGrey {
+    background-color: #555555;
+}
+
+.bkgColorBisque {
+    background-color: #eee;
+}
+
+.colorWhite {
+    color: bisque;
+}
+
+/* border*/
+
+.borderb {
+    border-bottom: 1px solid bisque;
+}
+
+/* Decoration*/
+
+.a {
+    text-decoration: none;
+}
+
+.weather {
+
+    gap: 30px;
+}
