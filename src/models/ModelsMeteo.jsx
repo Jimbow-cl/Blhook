@@ -1,35 +1,30 @@
 import Card from 'react-bootstrap/Card';
 
 
-function ModelsMeteo(props) {
-    let time = `Météo  du : ${props.dt_txt}`
-    let image = `https://openweathermap.org/img/wn/${props.icon}.png`
+function Models(props) {
+    let image = `public/iconMeteo/${props.weather}.svg`
+
 
     return (
-        <div  >
+        <div className='d-flex align'  >
 
-            <Card style={{ width: '18rem' }} >
-                <Card.Img variant="top" className="weather" src={image} />
+            <Card style={{ width: '38rem' }} >
+                <Card.Img style={{ width: '200px' }} variant="top" className="weather" src={image} />
                 <Card.Body>
-                    <Card.Title>{time}</Card.Title>
-                    <Card.Text>
-                        <p >Temperature de l'après-midi: {props.temp_max}°C</p>
-                        <p>Temperature du Matin: {props.temp_min}°C </p>
-                        <p >Vitesse du vent : {props.speed} km/h</p>
-                        <p>Visibilité {props.visibility} mètres</p>
-                        <p>{props.description}</p>
+                    <Card.Title className="roboto36 bold">{props.city}</Card.Title>
+                    <Card.Text className="roboto20">Temperature de l'après-midi: {props.tmax}°C</Card.Text>
+                    <Card.Text className="roboto20">Temperature du Matin: {props.tmin}°C</Card.Text>
+                    <Card.Text className="roboto20">Vitesse du vent : {props.wind10m} km/h</Card.Text>
+                    <Card.Text className="roboto20"> Précipitation {props.probarain} % mètres</Card.Text>
 
-                    </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">Last updated 3 mins ago</small>
+                    <small className="text-muted roboto20">{props.datetime}</small>
                 </Card.Footer>
             </Card>
-
-
         </div >
     )
 
 }
 
-export default ModelsMeteo
+export default Models

@@ -1,5 +1,9 @@
-import ModelsMeteo from "../../models/ModelsMeteo";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import Models from "../../models/ModelsMeteo";
+import moment from 'moment';
+import 'moment/dist/locale/fr';
+import 'moment/locale/fr';
+
 
 function Meteo() {
 
@@ -7,22 +11,20 @@ function Meteo() {
 
 
     async function Meteo1() {
-        let response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=43.70&lon=7.27&units=metric&lang=fr&appid=48e51318a2fe8630fa5b92fae26ea42b
-
-        `);
-        console.log('reponse meteo', response);
+        let response = await fetch("https://api.meteo-concept.com/api/forecast/daily/0?token=94b3abb204b7ca08be81516641cbdef7f3ca3d2f08766871f3a4e4c56b40f464&insee=06088");
         let donnees = await response.json();
-        console.log('données meteo', donnees.list);
-        setMeteo(donnees.list)
+        console.log('données', donnees);
+        setMeteo([donnees]);
+    };
 
-    }
     useEffect(() => { Meteo1() }, []);
-    const RenderMyArray = () => {
-        return meteo.map((item, id) => {
 
+    const RenderMyArray = () => {
+        console.log('meteo', meteo);
+        return meteo.map((item) => {
             return (
                 <div>
-                    <ModelsMeteo key={id} dt_txt={item.dt_txt} description={item.weather[0].description} visibility={item.visibility} icon={item.weather[0].icon} temp_min={item.main.temp_min} temp_max={item.main.temp_max} speed={item.wind.speed} />
+                    <Models key={item.city.insee} datetime={moment(item.forecast.datetime).format("LL")} city={item.city.name} wind10m={item.forecast.wind10m} probarain={item.forecast.probarain} weather={item.forecast.weather} tmin={item.forecast.tmin} tmax={item.forecast.tmax} />
                 </div>
             );
         }
