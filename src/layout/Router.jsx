@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import PagePost from "../pagePost";
 import PageCreate from "../pageCreate";
 import PageProfil from "../pageProfil";
+import Connect from "../user/Connect";
 
 const router = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
 
     {
         path: "/Connect",
-        element: <PagePost />,
+        element: <Connect />,
     },
     {
         path: "/Disconnect",

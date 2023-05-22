@@ -9,7 +9,7 @@ function Home() {
 
     return (
 
-        <div className="container-fluid vh-100">
+        <div className="container-fluid ">
             {/*Header*/}
             <Header />
             <div className='row '>
@@ -26,7 +26,7 @@ function Home() {
                     <div className="row lh-50"></div>
                     <div className="row lh-50"></div>
 
-                    <div className="row h-100">
+                    <div className="row">
                         <Meteo />
                     </div>
                 </div>

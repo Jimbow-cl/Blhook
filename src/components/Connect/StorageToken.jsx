@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-
 const TokenStorage = async (setUser) => {
     // "En attente pour le developpement, token du compte admin"
+    const testtoken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDY3N2U1ZmI4M2ZhYTAwMWI0OTJlNTgiLCJpYXQiOjE2ODQ3NDExNjAsImV4cCI6MTY4NDgyNzU2MH0.XHtHjh4BjYEfQ-cHcK2Fx3tY9-Xj44CphCoAxg81hUE";
+    localStorage.setItem("token", JSON.stringify(testtoken));
     const token = JSON.parse(localStorage.getItem("token"));
     console.log("token", token);
 
