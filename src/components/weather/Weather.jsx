@@ -32,7 +32,7 @@ function Meteo() {
 
     };
     return (
-        <div className='d-flex weather'> <RenderMyArray /></div>
+        <div className='d-flex weather align'> <RenderMyArray /></div>
 
     )
 

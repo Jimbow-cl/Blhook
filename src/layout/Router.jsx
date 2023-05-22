@@ -2,6 +2,7 @@ import Home from "../Home";
 import { createBrowserRouter } from "react-router-dom";
 import PagePost from "../pagePost";
 import PageCreate from "../pageCreate";
+import PageProfil from "../pageProfil";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/Profil",
-        element: <PagePost />,
+        element: <PageProfil />,
     },
     {
         path: "/Contact",

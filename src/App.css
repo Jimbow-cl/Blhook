@@ -46,6 +46,13 @@
     justify-content: center;
 }
 
+.flexform {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
 /* Color*/
 .bkgColorBlack {
     background-color: black;
