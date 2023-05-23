@@ -6,13 +6,13 @@ function Contact() {
         <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Votre Nom</Form.Label>
-                <Form.Control type="nom" placeholder="Nom" />
+                <Form.Control type="text" placeholder="Nom" />
                 <Form.Label>Votre Prénom</Form.Label>
-                <Form.Control type="prenom" placeholder="Prénom" />
+                <Form.Control type="text" placeholder="Prénom" />
                 <Form.Label>Votre E-mail</Form.Label>
-                <Form.Control type="mailNomailm" placeholder="Mail" />
+                <Form.Control type="text" placeholder="Mail" />
                 <Form.Label>Votre Message</Form.Label>
-                <Form.Control type="message" />
+                <Form.Control type="text" />
             </Form.Group>
 
 

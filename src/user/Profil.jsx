@@ -51,11 +51,11 @@ function Profil() {
             <Form >
                 <Form.Group className="mb-3 d-flex flex-column" controlId="formBasicEmail">
                     <Form.Label>Votre id</Form.Label>
-                    <Form.Control type="id" value={profil._id} disabled />
+                    <Form.Control type="text" value={profil._id} disabled />
                     <Form.Label>Nom</Form.Label>
-                    <Form.Control type="firstname" onChange={(e) => { setFirstName(e.target.value) }} defaultValue={profil.firstname} />
+                    <Form.Control type="text" onChange={(e) => { setFirstName(e.target.value) }} defaultValue={profil.firstname} />
                     <Form.Label>Prénom</Form.Label>
-                    <Form.Control type="lastname" onChange={(e) => { setLastName(e.target.value) }} value={profil.lastname} disabled />
+                    <Form.Control type="ltext" onChange={(e) => { setLastName(e.target.value) }} value={profil.lastname} disabled />
                     <Form.Text className="text-muted">
                         Pour modifier votre prénom, merci de contacter votre administrateur.
                     </Form.Text>
@@ -65,13 +65,13 @@ function Profil() {
                         Pour modifier votre adresse e-mail , merci de contacter votre administrateur.
                     </Form.Text>
                     <Form.Label>Age</Form.Label>
-                    <Form.Control type="age" onChange={(e) => { setAge(e.target.value) }} defaultValue={profil.age} />
+                    <Form.Control type="text" onChange={(e) => { setAge(e.target.value) }} defaultValue={profil.age} />
 
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Occupation</Form.Label>
-                    <Form.Control type="occupation" onChange={(e) => { setOccupation(e.target.value) }} defaultValue={profil.occupation} placeholder="quel est votre occupation?" />
+                    <Form.Control type="text" onChange={(e) => { setOccupation(e.target.value) }} defaultValue={profil.occupation} placeholder="quel est votre occupation?" />
                 </Form.Group>
                 <Button variant="primary" onClick={Modify} type="submit">
                     Modifier

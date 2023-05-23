@@ -15,7 +15,7 @@ function ConnectPost() {
         TokenStorage(setConnect)
     }, []);
 
-    const id = connect._id
+
 
     const [post, setPost] = useState([]);
 
@@ -30,7 +30,7 @@ function ConnectPost() {
     }
     useEffect(() => {
         Post1()
-        console.log("info ID: ", id)
+
     }, []);
 
     const [filtre, setFiltre] = useState(post);
