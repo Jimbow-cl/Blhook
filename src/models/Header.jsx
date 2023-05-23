@@ -33,9 +33,8 @@ function Header() {
                     <div className='col-2 lh-50 align gap-5 colorWhite roboto36'><img className='lh-41' src='./public/logo/logoBlhook.png' /><p>The Blhook</p></div>
                     <div className='col-2 lh-50 colorWhite roboto36 d-flex justify-content-end'><p>Bienvenue</p></div>
                     <div className='col-1 lh-50  colorWhite roboto36'>{user.firstname}</div>
-                    <div className='col-4 lh-50 align gap-5 colorWhite roboto36'><p> Nous sommes le {moment().format('LLL')}  </p></div>
+                    <div className='col-4 lh-50 align gap-5 colorWhite roboto36'><p> Nous sommes le {moment().format('LL')}  </p></div>
                     <div className='col-3 lh-50 align gap-5 colorWhite roboto36' id="timer"> <Timer /></div>
-                    <div className='col-1 lh-50 align gap-5 ' id="timer"><img src="./public/icon/delog orange.png" /></div>
 
                 </div>
 

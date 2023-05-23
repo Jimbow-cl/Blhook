@@ -1,6 +1,6 @@
-import Menu from "./layout/Menu";
-import Header from "./models/Header";
-import Create from "./user/Create";
+import Menu from "../layout/Menu";
+import Header from "../models/Header";
+import Create from "../user/Create";
 
 
 function PageCreate() {

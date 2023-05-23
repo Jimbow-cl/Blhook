@@ -1,9 +1,11 @@
-import Home from "../Home";
+import Home from "../pages/Home";
 import { createBrowserRouter } from "react-router-dom";
-import PagePost from "../pagePost";
-import PageCreate from "../pageCreate";
-import PageProfil from "../pageProfil";
+import PagePost from "../pages/PagePost";
+import PageProfil from "../pages/PageProfil";
 import Connect from "../user/Connect";
+import PageCreate from "../pages/PageCreate";
+import PageContact from "../pages/PageContact";
+import PageConnectPost from "../pages/PageConnectPost";
 
 const router = createBrowserRouter([
     {
@@ -32,10 +34,15 @@ const router = createBrowserRouter([
         path: "/Profil",
         element: <PageProfil />,
     },
+
+    {
+        path: "/ConnectPost",
+        element: <PageConnectPost />,
+    },
     {
         path: "/Contact",
-        element: <PagePost />,
-    },
+        element: <PageContact />,
+    }
 
 
 

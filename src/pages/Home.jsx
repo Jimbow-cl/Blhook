@@ -1,14 +1,15 @@
-import Menu from "./layout/Menu"
-import Header from "./models/Header";
-import Post from "./components/post/Post";
+import Menu from "../layout/Menu"
+import Meteo from "../components/weather/Weather";
+import Header from "../models/Header";
 
 
-function PagePost() {
+
+function Home() {
 
 
     return (
 
-        <div className="container-fluid vh-100">
+        <div className="container-fluid ">
             {/*Header*/}
             <Header />
             <div className='row '>
@@ -23,10 +24,10 @@ function PagePost() {
                 {/*Colonne de Droite, Contenu*/}
                 <div className='col-10 bkgColorBisque'>
                     <div className="row lh-50"></div>
-                    <div className="row lh-50 roboto36 align "> Post'Book</div>
                     <div className="row lh-50"></div>
-                    <div className="row h-100">
-                        <Post />
+
+                    <div className="row">
+                        <Meteo />
                     </div>
                 </div>
             </div>
@@ -34,4 +35,4 @@ function PagePost() {
     )
 }
 
-export default PagePost
+export default Home
