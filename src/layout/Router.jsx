@@ -1,6 +1,5 @@
 import Home from "../Home";
 import Login from "../Login";
-import Create from "../user/Create";
 import { createBrowserRouter } from "react-router-dom";
 import PagePost from "../pagePost";
 import PageCreate from "../pageCreate";

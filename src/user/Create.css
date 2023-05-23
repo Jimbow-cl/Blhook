@@ -13,45 +13,56 @@
 
 }
 
-.margin {
-    margin-bottom: 2%;
-}
-
 .btnenvoyer {
     display: flex;
     margin: 0% 0% 0% 38%;
 }
 
-.container {
-    margin: 0% 0% 0% 38%;
-    border-width: 10%;
-}
-
 .conditions {
-    font-size: 60%;
+    font-size: 50%;
 }
 
 .logo {
     display: flex;
-    margin: 4% 3% 4% 33%;
-}
-
-.input {
-    display: flex;
-    flex-direction: column;
-
+    margin: 5% 0% 5% 0%;
 }
 
 .margin {
-    margin-bottom: 2%;
+    margin-bottom: 3%;
 }
 
 .btnenvoyer {
     display: flex;
-    margin: 0% 0% 0% 38%;
+    align-items: center;
+   margin: 1% 0% 5% 45%;
+   color: rgb(255, 105, 5);
+   font-size: 25px;
+   border-color: rgb(151, 148, 148);
+   border-width: 9px;
+   background-color: rgb(236, 234, 234);
+    
 }
 
 .container {
-    margin: 0% 0% 0% 38%;
-    border-width: 10%;
+    display:flex;
+    align-items: center;
+    border: none;
+    padding-bottom: 2%;
+    border-radius: 5%;
+
+}
+
+.checkbox {
+    color: rgb(255, 0, 0);
+    font-size: 10px;
+}
+.messageconfirme{
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    
+}
+.messageconfirme2{
+    font-size: 25px;
+    color:rgb(66, 66, 66);
 }
