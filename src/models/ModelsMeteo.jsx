@@ -15,7 +15,7 @@ function Models(props) {
                     <Card.Text className="roboto20">Temperature de l'après-midi: {props.tmax}°C</Card.Text>
                     <Card.Text className="roboto20">Temperature du Matin: {props.tmin}°C</Card.Text>
                     <Card.Text className="roboto20">Vitesse du vent : {props.wind10m} km/h</Card.Text>
-                    <Card.Text className="roboto20"> Précipitation {props.probarain} % mètres</Card.Text>
+                    <Card.Text className="roboto20"> Risque de Précipitation {props.probarain} % </Card.Text>
 
                 </Card.Body>
                 <Card.Footer>

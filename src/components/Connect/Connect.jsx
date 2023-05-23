@@ -1,31 +1,35 @@
 import { useEffect, useState } from "react";
-import Home from "../../pages/Home";
+import { Navigate, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 function Connexion() {
   const [donnees, setDonnees] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const token ="";
+  const home = useNavigate('/Profil');
 
-  
+  useEffect(() => { donnees }, [])
+
+
   async function Entree() {
 
-    
+
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    
+
     var raw = JSON.stringify({
       "email": email,
       "password": password
     });
-    
+
     var requestOptions = {
       method: 'POST',
       headers: myHeaders,
       body: raw,
       redirect: 'follow'
     };
-    
+
     const reponse = await fetch(
       "https://social-network-api.osc-fr1.scalingo.io/theBlhook/login",
       requestOptions
@@ -34,19 +38,14 @@ function Connexion() {
 
     setDonnees(conex);
     console.log(donnees);
-    token= donnees.token
+    const token = donnees.token
     localStorage.setItem("token", JSON.stringify(token));
-    
+    Display()
+
     function Display() {
       if (token != null && token != undefined) {
-         {Home}
       }
-      else {
-         
-      }
-  };
-  useEffect(()=>{donnees},[])
-  useEffect(()=>{Display},[])
+    }
   }
 
 

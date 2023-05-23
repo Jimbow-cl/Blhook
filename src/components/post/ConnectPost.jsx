@@ -9,14 +9,15 @@ import 'moment/locale/fr';
 // Conposant de tri des postes d'un utilisateur
 
 function ConnectPost() {
-
     const [connect, setConnect] = useState();
+
     useEffect(() => {
         TokenStorage(setConnect)
     }, []);
 
+    const id = connect._id
+
     const [post, setPost] = useState([]);
-    const [filterPost, setFilterPost] = useState([]);
 
 
     async function Post1() {
@@ -27,9 +28,14 @@ function ConnectPost() {
         setPost(donnees.posts);
 
     }
-    useEffect(() => { Post1() }, []);
+    useEffect(() => {
+        Post1()
+        console.log("info ID: ", id)
+    }, []);
 
+    const [filtre, setFiltre] = useState(post);
     const RenderMyArray = () => {
+
 
         return post.map((item, id) => {
 
