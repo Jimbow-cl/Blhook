@@ -1,6 +1,8 @@
 import Menu from "../layout/Menu";
 import Header from "../models/Header";
 import ConnectPost from "../components/post/ConnectPost";
+import CreatePost from "../components/post/CreatePost";
+import '../App.css'
 
 
 function PageConnectPost() {
@@ -22,9 +24,8 @@ function PageConnectPost() {
                 </div>
                 {/*Colonne de Droite, Contenu*/}
                 <div className='col-10 bkgColorBisque'>
-                    <div className="row lh-50"></div>
-                    <div className="row lh-50 roboto36 align">Publier un post</div>
-                    <div className="row lh-50"><ConnectPost /></div>
+                    <div className= "publierunpost">Publier un post</div>
+                    <div className="row lh-50"><ConnectPost /><CreatePost/></div>
                     <div className="row h-100 ">
 
                     </div>

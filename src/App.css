@@ -87,3 +87,49 @@
 
     gap: 30px;
 }
+
+/* Page Publier un post */
+
+.publierunpost {
+    display: flex;
+    justify-content: center;
+   font-size: 40px;
+   color: #424443;
+   padding: 1% 0% 1% 0%; 
+   border-bottom-style: solid  ; 
+   border-width: 1px 2px 3px 4px;
+   margin: 0% 20% 2% 20%; 
+}
+.contenair {
+    display: flex;
+    justify-content: center;
+}
+
+.post{
+   border-style: hidden;
+}
+.title {
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    padding: 5% 0% 5% 0%;  
+}
+.text{
+    padding-bottom: 12%;
+    
+}
+.allbtn{
+  display: flex;
+  justify-content: center;
+  gap: 7%;
+ 
+}
+.buttoncp {
+  color: rgb(43, 161, 229);
+  border-color: rgb(8, 76, 248); 
+}
+.buttoncp:hover {
+    background-color: rgb(43, 161, 229);
+    color: #ffffff;
+    border-color: rgb(74, 138, 113) ;
+}
