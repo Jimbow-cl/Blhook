@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Card from 'react-bootstrap/Card';
+
 
 
 function Connexion() {
@@ -52,34 +54,33 @@ function Connexion() {
 
   return (
     <div>
+   <Card className="container" style={{ width: '30rem' }} >
+    <h1>Connectez-vous !</h1>
+
+    <Card.Img className="logo" style={{ width: '10rem' }} src="./public/logo/logoBlhook.png" />
+    <Card.Body>
+   
       <div>
+         <label>Email </label>
+         <input onChange={(e) => {setEmail(e.target.value);}}/>
+       <div>
+        <label>Mot de passe </label>
+        <input onChange={(e) => {setPassword(e.target.value);}}/>
         <div>
-          <div>
-            <label>Email </label>
-            <input
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-            />
-          </div>
-          <div>
-            <label>Mot de passe </label>
-            <input
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />
-            <button
-              onClick={() => {
-                Entree();
-              }}
-            >
-              Connexion
-            </button>
-          </div>
+        <button onClick={() => {Entree();}}>
+        Connexion
+        </button>
         </div>
+        </div>  
+      
+      
+          
+        
       </div>
+  </Card.Body>
+</Card>
     </div>
+    
   );
 }
 
