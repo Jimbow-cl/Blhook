@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+
 import { useEffect, useRef } from "react";
 import Disconnect from "../user/Disconnect";
 
@@ -53,9 +54,7 @@ function Menu() {
 
             </div>
             <div className="row mt-5 ">
-                <Link className="align a" to="/Connect"><Button ref={connect} className="w-75" variant="success">Connexion</Button>{' '}</Link>
-                <Link className="align a" to="/Disconnect"><Button ref={disconnect} className="w-75" onClick={Disconnect} variant="danger">Déconnexion</Button>{' '}</Link>
-
+                <Link className="align a" to="/Profil"><Button className="w-75" variant="primary">Profil</Button>{' '}</Link>
             </div>
             <div className="row mt-5 ">
             </div>

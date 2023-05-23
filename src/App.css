@@ -44,6 +44,7 @@
 .align {
     display: flex;
     justify-content: center;
+    ;
 }
 
 .flexform {
@@ -55,25 +56,25 @@
 
 /* Color*/
 .bkgColorBlack {
-    background-color: black;
+    background-color: #424443;
 }
 
 .bkgColorGrey {
-    background-color: #555555;
+    background-color: #e2ba8f;
 }
 
 .bkgColorBisque {
-    background-color: #eee;
+    background-color: #e0dede;
 }
 
 .colorWhite {
-    color: bisque;
+    color: #ff6600;
 }
 
 /* border*/
 
 .borderb {
-    border-bottom: 1px solid bisque;
+    border-bottom: 3px solid rgb(248, 101, 3);
 }
 
 /* Decoration*/
