@@ -1,7 +1,7 @@
 import Menu from "../layout/Menu"
 import Header from "../models/Header";
 import Post from "../components/post/Post";
-
+import '../App.css'
 
 function PagePost() {
 
@@ -25,7 +25,7 @@ function PagePost() {
                     <div className="row lh-50"></div>
                     <div className="row lh-50 roboto36 align "> Post'Book</div>
                     <div className="row lh-50"></div>
-                    <div className="row h-100">
+                    <div className="row overflow ">
                         <Post />
                     </div>
                 </div>
