@@ -9,6 +9,8 @@ function ModelsPost(props) {
     const [comm, setComm] = useState();
     const [comm2, setComm2] = useState([]);
 
+    const [Like, setLike] = useState(0);
+    const [historiqueLike, setHistoriqueLike] = useState([]);
 
     
     const btnclick = async() =>{ 
@@ -25,7 +27,7 @@ function ModelsPost(props) {
            
             }),
         };
-    
+        
 
         const reponse = await fetch("https://social-network-api.osc-fr1.scalingo.io/theBlhook/post/comment",options);
        
@@ -38,6 +40,48 @@ function ModelsPost(props) {
 
     useEffect (()=> { }, []);
     
+    const btnLike = async() =>{
+        const postlike = {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            "Authorization": "bearer token"
+            },
+            body: JSON.stringify({
+            postId: postId,
+            })
+            };
+            const response = await fetch("https://social-network-api.osc-fr1.scalingo.io/theBlhook/post/like", options);
+            const data = await response.json
+
+    }
+
+  
+  
+  
+    const buttonclik = () => {
+      console.log("ok");
+      setLike((like) => like + 1)
+      setHistoriqueLike([...historiqueLike, Like]);
+      console.log("tableau", historiqueLike);
+  
+  
+      if (historiqueLike.includes(Like) == true) {
+       
+      } else {
+        setHistoriqueLike([...historiqueLike, Like]);
+      }
+    };
+  
+    const max = setHistoriqueLike > setHistoriqueLike;
+    if (setHistoriqueLike == max) {
+      alert("nombre max");
+    } else setHistoriqueLike < max;
+    {
+      console.log("continue");
+    }
+  
+
      
     const popover = (
         <Popover id="popover-basic" className="contenairajoutcomm">
@@ -70,6 +114,16 @@ function ModelsPost(props) {
                     <Button variant="success" className="btncomm">Commentaire</Button>
                 </OverlayTrigger>
             </div>
+
+            {" "}
+      <button onClick={buttonclik}className="btncomm"> Like</button>
+      <p>{Like}</p>
+      <strong>
+       
+
+        
+      </strong>
+     
         </Card>
     )
 }
