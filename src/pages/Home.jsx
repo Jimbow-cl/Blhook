@@ -2,6 +2,7 @@ import Menu from "../layout/Menu"
 import Meteo from "../components/weather/Weather";
 import Header from "../models/ModelsHeader";
 import LocalStorage from "../components/storage/LocalStorage";
+import Footer from "../models/ModelsFooter";
 
 
 
@@ -17,11 +18,11 @@ function Home() {
 
     return (
 
-        <div className="container-fluid ">
+        <div className="container-fluid vh-100 ">
             {/*Header*/}
             <Header />
 
-            <div className='row '>
+            <div className='row h945 '>
                 {/*Colonne de Gauche, Menu*/}
                 <Menu />
                 {/*Colonne de Droite, Contenu*/}
@@ -32,7 +33,9 @@ function Home() {
                     <div className="row">
                         <Meteo />
                     </div>
+
                 </div>
+                <Footer />
             </div>
         </div>
     )

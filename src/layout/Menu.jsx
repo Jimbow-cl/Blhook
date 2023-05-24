@@ -35,7 +35,7 @@ function Menu() {
     }
     useEffect(() => { Display() },)
     return (
-        <div className="col-2 h945 colorWhite  bkgColorBlack imgBkg  ">
+        <div className="col-2  colorWhite  bkgColorBlack imgBkg  ">
             <div className="row m-3 align h-10  borderOrange bkgColorGrey ">
                 <div className="col align"><img src="./src/assets/icon/profil.png" style={{ width: "78px" }} /></div>
                 <div className="col user">
