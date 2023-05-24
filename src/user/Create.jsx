@@ -79,12 +79,12 @@ function Create() {
                         <br></br>
                         <input type="checkbox"></input> <label className="conditions"> Autorise la reception de mail emisent par les differents partenaires publicitaires de The Blhook.</label>
                         <br></br>
-                        <input onChange={handleChange} value={isSubscribed} name="checkbox" type="checkbox"></input> <label className="conditions"> j'accepte les termes et conditions d'accées.</label><label className='checkbox'>Obligatoire pour confirmer l'incription!</label>
+                        <input onChange={handleChange} value={isSubscribed} name="checkbox" type="checkbox"></input> <label className="conditions"> j&apos;accepte les termes et conditions d&apos;accées.</label><label className='checkbox'>Obligatoire pour confirmer l&apos;incription!</label>
 
                     </Card.Body>
                 </Card>
             </form>
-            <div className='messageconfirme'>{isSubscribed && <h2 className='messageconfirme2'>✅ Confirmation d'accées </h2>}</div>
+            <div className='messageconfirme'>{isSubscribed && <h2 className='messageconfirme2'>✅ Confirmation d&apos;accées </h2>}</div>
             <button onClick={btnclick} disabled={!isSubscribed} className="btnenvoyer" >Envoyer</button>
 
 

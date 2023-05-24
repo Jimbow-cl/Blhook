@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
-import TokenStorage from '../components/Connect/StorageToken';
+import TokenStorage from '../components/storage/TokenStorage';
 import { useEffect } from 'react';
 
 
@@ -55,10 +55,7 @@ function Profil() {
                     <Form.Label>Nom</Form.Label>
                     <Form.Control type="text" onChange={(e) => { setFirstName(e.target.value) }} defaultValue={profil.firstname} />
                     <Form.Label>Prénom</Form.Label>
-                    <Form.Control type="ltext" onChange={(e) => { setLastName(e.target.value) }} value={profil.lastname} disabled />
-                    <Form.Text className="text-muted">
-                        Pour modifier votre prénom, merci de contacter votre administrateur.
-                    </Form.Text>
+                    <Form.Control type="ltext" onChange={(e) => { setLastName(e.target.value) }} defaultValue={profil.lastname} />
                     <Form.Label>Adresse Mail</Form.Label>
                     <Form.Control type="email" onChange={(e) => { setEmail(e.target.value) }} value={profil.email} disabled />
                     <Form.Text className="text-muted">

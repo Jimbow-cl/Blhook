@@ -1,10 +1,9 @@
-import TokenStorage from "../components/Connect/StorageToken";
 import Header from "../models/Header";
 import Menu from "../layout/Menu";
-import Connexion from "../components/Connect/Connect";
+import Connexion from "../user/Connect";
 
 function PageConnect() {
-  TokenStorage();
+
 
   return (
     <div className="container-fluid ">

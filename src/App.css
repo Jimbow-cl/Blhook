@@ -59,8 +59,16 @@
     background-color: #424443;
 }
 
-.bkgColorGrey {
+.bkgColorOrange {
     background-color: #e2ba8f;
+}
+
+.imgBkg {
+    background-image: url(/public/logoBlhook\ Tran.png);
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-position: 69px 463px;
+    background-size: 151%;
 }
 
 .bkgColorBisque {

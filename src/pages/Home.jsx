@@ -1,10 +1,18 @@
 import Menu from "../layout/Menu"
 import Meteo from "../components/weather/Weather";
 import Header from "../models/Header";
+import LocalStorage from "../components/storage/LocalStorage";
+
 
 
 
 function Home() {
+    const tokenSet = (localStorage.getItem('token') !== null);
+
+    if (tokenSet) {
+        LocalStorage()
+    }
+
 
 
     return (
@@ -12,6 +20,7 @@ function Home() {
         <div className="container-fluid ">
             {/*Header*/}
             <Header />
+
             <div className='row '>
                 {/*Colonne de Gauche, Menu*/}
                 <div className="col-2 h945 colorWhite  bkgColorBlack  ">

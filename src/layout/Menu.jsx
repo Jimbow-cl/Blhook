@@ -31,10 +31,10 @@ function Menu() {
 
 
         }
-    };
-    useEffect(() => { Display() }, [])
+    }
+    useEffect(() => { Display() },)
     return (
-        <nav>
+        <nav className="imgBkg" >
             <div className="row mt-5">
                 <Link className="align a " to="/"><Button className="w-75" variant="warning">Home</Button>{' '}</Link>
             </div>
@@ -44,7 +44,7 @@ function Menu() {
 
             </div>
             <div className="row mt-5 ">
-                <Link className="align a" to="/Post"><Button className="w-75" variant="warning">Post'Book</Button>{' '}</Link>
+                <Link className="align a" to="/Post"><Button className="w-75" variant="warning">Post&apos;Book</Button>{' '}</Link>
             </div>
 
             <div className="row mt-5 ">

@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Form } from 'react-bootstrap';
 import '../App.css'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 
 
@@ -35,7 +35,7 @@ function ModelsCP() {
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
 
-  };
+  }
 
 
   return (

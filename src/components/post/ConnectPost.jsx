@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import TokenStorage from "../Connect/StorageToken"
 import ModelsPost from "../../models/ModelsPost";
 import moment from "moment";
 import 'moment/dist/locale/fr';
@@ -10,14 +9,11 @@ import 'moment/locale/fr';
 
 function ConnectPost() {
 
-    const [connect, setConnect] = useState();
 
-
-
-    // Recuperation des données de l'utilisateur connecté
+    const id = JSON.parse(localStorage.getItem("id"))
     useEffect(() => {
-        TokenStorage(setConnect)
-    }, []);
+        id
+    },)
 
 
 
@@ -29,16 +25,12 @@ function ConnectPost() {
         console.log('reponse post', response);
         let donnees = await response.json();
         console.log('données post', donnees.posts);
-        let filteredPosts = donnees.posts.filter(p => p.userId == connect._id);
+        let filteredPosts = donnees.posts.filter(p => p.userId == id);
         console.log('filteredPost', filteredPosts);
         setPost(filteredPosts);
 
     }
-    useEffect(() => {
-        Post1()
-        console.log("id post", post)
-
-    }, []);
+    useEffect(() => { Post1() }, []);
 
 
     const RenderMyArray = () => {
@@ -62,6 +54,5 @@ function ConnectPost() {
     );
 
 }
-
 
 export default ConnectPost

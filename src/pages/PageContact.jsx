@@ -21,7 +21,7 @@ function PageContact() {
                 {/*Colonne de Droite, Contenu*/}
                 <div className='col-10 bkgColorBisque'>
                     <div className="row lh-50"></div>
-                    <div className="row lh-50 roboto36 align ">Contact</div>
+                    <div className="row lh-50 roboto36 align ">Contactez-nous!</div>
                     <div className="row lh-50"></div>
                     <div className="row h-100">
                         <Contact />

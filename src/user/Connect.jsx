@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { Col, Button, Row, Container, Card, Form, Alert } from "react-bootstrap";
-import TokenStorage from "./StorageToken";
+
 
 function Connexion() {
   const [email, setEmail] = useState();
@@ -36,16 +36,17 @@ function Connexion() {
     const token = conex.token;
     localStorage.setItem("token", JSON.stringify(token));
 
+
     if (conex.success == false) {
       isVisible.current.style.display = "block";
+      localStorage.clear();
     }
-    if (token != null && token != undefined) {
-      TokenStorage();
+    if (conex.success == true) {
+      localStorage.removeItem("check");
       window.location = "/";
+
     }
-    if (token == null || token == undefined) {
-      localStorage.removeItem("token")
-    }
+
 
   }
 
