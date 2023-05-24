@@ -108,6 +108,66 @@
     gap: 30px;
 }
 
+/* Page comm sur post */
+
+.btncommdisplay {
+    display: flex;
+    justify-content: center;
+    padding: 5% 0% 3% 0%;
+}
+
+.btncomm {
+    background-color: #e2ba8f;
+    border: #e2ba8f;
+}
+
+.btncomm:hover {
+    background-color: #e09646;
+    color: #fbfbfb;
+}
+
+.titlecomm {
+    background-color: #424443;
+    color: #e0dede;
+}
+
+.contenairajoutcomm {
+    border-color: #e2ba8f;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.contenairbtnsend {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.btnsend {
+    background-color: #f97924;
+    color: #e0dede;
+    border-color: #f97924;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+}
+
+.btnsend:hover {
+    background-color: #ff5100;
+    border-color: #ff5100;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+}
+
+.commutilisateur {
+    background-color: #f5f4f4b4;
+    padding: 2% 2% 2% 2%;
+}
+
+
+
 /* Page Publier un post */
 
 .publierunpost {
@@ -123,45 +183,23 @@
 
 .overflow {
     overflow-x: scroll;
-}
-
-.contenair {
-    display: flex;
-    justify-content: center;
+    ;
 }
 
 .post {
     border-style: hidden;
 }
 
-.title {
-    font-size: 45px;
-    display: flex;
-    justify-content: center;
-    padding: 5% 0% 5% 0%;
-}
 
-.text {
-    padding-bottom: 12%;
-
-}
 
 .m-bb {
 
     margin-bottom: 10px;
 }
 
-.allbtn {
-    display: flex;
-    justify-content: center;
-    gap: 7%;
 
-}
 
-.buttoncp {
-    color: rgb(43, 161, 229);
-    border-color: rgb(8, 76, 248);
-}
+
 
 .buttoncp:hover {
     background-color: rgb(43, 161, 229);
