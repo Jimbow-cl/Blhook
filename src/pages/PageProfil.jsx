@@ -1,6 +1,5 @@
 import Menu from "../layout/Menu";
 import Header from "../models/Header";
-import Create from "../user/Create";
 import Profil from "../user/Profil";
 
 

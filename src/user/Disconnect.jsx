@@ -1,5 +1,6 @@
 function Disconnect() {
-    localStorage
+    localStorage.removeItem("user")
+    localStorage.removeItem("id")
     localStorage.removeItem("token");
 
 }

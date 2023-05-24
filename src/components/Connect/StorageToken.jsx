@@ -1,4 +1,4 @@
-const TokenStorage = async (setUser) => {
+const TokenStorage = async () => {
   // "En attente pour le developpement, token du compte admin"
   const token = JSON.parse(localStorage.getItem("token"));
   console.log("token", token);
@@ -19,8 +19,11 @@ const TokenStorage = async (setUser) => {
   console.log("reponse user", response);
   let donnees = await response.json();
   console.log("données user", donnees);
+  const id = donnees._id
+  localStorage.setItem("id", JSON.stringify(id));
+  const user = donnees.lastname
+  localStorage.setItem("user", JSON.stringify(user));
 
-  setUser(donnees);
 };
 
 export default TokenStorage;

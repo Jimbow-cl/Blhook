@@ -1,15 +1,11 @@
-import { useEffect, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-
+import { useRef, useState } from "react";
+import { Col, Button, Row, Container, Card, Form, Alert } from "react-bootstrap";
+import TokenStorage from "./StorageToken";
 
 function Connexion() {
-  const [donnees, setDonnees] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const home = useNavigate('/Profil');
-
-  useEffect(() => { donnees }, [])
+  const isVisible = useRef();
 
 
   async function Entree() {
@@ -36,49 +32,71 @@ function Connexion() {
     );
     const conex = await reponse.json();
 
-    setDonnees(conex);
-    console.log(donnees);
-    const token = donnees.token
+    console.log("donnees", conex);
+    const token = conex.token;
     localStorage.setItem("token", JSON.stringify(token));
-    Display()
 
-    function Display() {
-      if (token != null && token != undefined) {
-      }
+    if (conex.success == false) {
+      isVisible.current.style.display = "block";
     }
+    if (token != null && token != undefined) {
+      TokenStorage();
+      window.location = "/";
+    }
+    if (token == null || token == undefined) {
+      localStorage.removeItem("token")
+    }
+
   }
 
-
-
   return (
-    <div>
-      <div>
-        <div>
-          <div>
-            <label>Email </label>
-            <input
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-            />
-          </div>
-          <div>
-            <label>Mot de passe </label>
-            <input
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />
-            <button
-              onClick={() => {
-                Entree();
-              }}
-            >
-              Connexion
-            </button>
-          </div>
-        </div>
-      </div>
+    <div className="align-items-center">
+      <Container className="d-flex justify-content-center">
+        <Row className="vh-100 d-flex justify-content-center align-items-center">
+          <Col >
+            <div className="border border-3 border-primary"></div>
+            <Card className="shadow">
+              <Card.Body>
+                <div className="mb-3 mt-md-4">
+                  <h2 className="fw-bold mb-2 text-uppercase ">Connexion</h2>
+                  <p className=" mb-5">Merci d&apos;entrer votre adresse mail et votre mot de passe </p>
+                  <div className="mb-3">
+                    <Form >
+                      <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label className="text-center">
+                          Adresse E-mail
+                        </Form.Label>
+                        <Form.Control type="email" onChange={(e) => {
+                          setEmail(e.target.value);
+                        }} placeholder="Email" />
+                      </Form.Group>
+
+                      <Form.Group
+                        className="mb-3"
+                        controlId="formBasicPassword"
+                      >
+                        <Form.Label>Mot de Passe</Form.Label>
+                        <Form.Control type="password" onChange={(e) => {
+                          setPassword(e.target.value);
+                        }} placeholder="Mot de Passe" />
+                      </Form.Group>
+                      <div className="d-grid">
+                        <Button
+                          variant="success" onClick={Entree}  >
+                          Login
+                        </Button>
+                      </div>
+                    </Form>
+                    <Alert key="danger" variant="danger" ref={isVisible} style={{ display: 'none' }}>
+                      Mauvais Login ou Mot de Passe!
+                    </Alert>
+                  </div>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

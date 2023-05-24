@@ -9,8 +9,12 @@ import 'moment/locale/fr';
 // Conposant de tri des postes d'un utilisateur
 
 function ConnectPost() {
+
     const [connect, setConnect] = useState();
 
+
+
+    // Recuperation des données de l'utilisateur connecté
     useEffect(() => {
         TokenStorage(setConnect)
     }, []);
@@ -21,19 +25,22 @@ function ConnectPost() {
 
 
     async function Post1() {
-        let response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/theBlhook/posts?page=&limit=200`);
+        let response = await fetch(`https://social-network-api.osc-fr1.scalingo.io/theBlhook/posts?page=0&limit=200`);
         console.log('reponse post', response);
         let donnees = await response.json();
         console.log('données post', donnees.posts);
-        setPost(donnees.posts);
+        let filteredPosts = donnees.posts.filter(p => p.userId == connect._id);
+        console.log('filteredPost', filteredPosts);
+        setPost(filteredPosts);
 
     }
     useEffect(() => {
         Post1()
+        console.log("id post", post)
 
     }, []);
 
-    const [filtre, setFiltre] = useState(post);
+
     const RenderMyArray = () => {
 
 
