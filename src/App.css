@@ -37,6 +37,10 @@
     height: 41px;
 }
 
+.h-10 {
+    height: 10%
+}
+
 .h945 {
     height: 94.5vh;
 }
@@ -56,7 +60,7 @@
 
 /* Color*/
 .bkgColorBlack {
-    background-color: #424443;
+    background-color: #2e302f;
 }
 
 .bkgColorOrange {
@@ -67,12 +71,16 @@
     background-image: url(/public/logoBlhook\ Tran.png);
     background-repeat: no-repeat;
     background-clip: content-box;
-    background-position: 69px 463px;
-    background-size: 151%;
+    background-position: 123px 463px;
+    background-size: 113%;
 }
 
 .bkgColorBisque {
     background-color: #e0dede;
+}
+
+.bkgColorGrey {
+    background-color: #424443;
 }
 
 .colorWhite {
@@ -83,6 +91,10 @@
 
 .borderb {
     border-bottom: 3px solid rgb(248, 101, 3);
+}
+
+.borderOrange {
+    border: orange solid 1px
 }
 
 /* Decoration*/
@@ -155,4 +167,11 @@
     background-color: rgb(43, 161, 229);
     color: #ffffff;
     border-color: rgb(74, 138, 113);
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

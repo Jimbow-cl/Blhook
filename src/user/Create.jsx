@@ -64,7 +64,7 @@ function Create() {
 
             <form >
                 <Card className="container" style={{ width: '30rem' }} >
-                    <Card.Img className="logo" style={{ width: '10rem' }} src="./public/logo/logoBlhook.png" />
+                    <Card.Img className="logo" style={{ width: '10rem' }} src="./public/logoBlhook.png" />
                     <Card.Body>
                         <div className="input" >
 
