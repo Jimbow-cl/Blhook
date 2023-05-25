@@ -54,7 +54,7 @@ function ModelsPost(props) {
                 </Card.Text>
                 <Card.Footer className="text-muted roboto20">Message de {props.lastname} le {props.date}</Card.Footer>
                 <br></br>
-                <ModelsComment />
+                <div>{props.comments}</div>
             </Card.Body>
             <div className="btncommdisplay">
                 <OverlayTrigger trigger="click" placement="right" overlay={popover}>

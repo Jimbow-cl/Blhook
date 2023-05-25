@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import ModelsPost from "../../models/ModelsPost";
+import ModelsComment from "../../models/ModelsComment";
 import moment from "moment";
 import 'moment/dist/locale/fr';
 import 'moment/locale/fr';
@@ -39,8 +40,22 @@ function ConnectPost() {
         return post.map((item, id) => {
 
             return (
+
                 <div>
-                    <ModelsPost id={item._id} key={id} title={item.title} post={item.content} lastname={item.lastname} date={moment(item.date).format("LL")} />
+
+                    <ModelsPost id={item._id} key={id} title={item.title} post={item.content} lastname={item.lastname} date={moment(item.date).format("LL")}
+
+                        comments={item.comments.map((item, id) => {
+                            return (
+                                <div>
+                                    <ModelsComment key={id} firstname={item.firstname} content={item.content} likes={item.likes} />
+                                </div>
+                            );
+                        }
+                        )}
+
+
+                    />
                 </div>
             );
         }
