@@ -4,11 +4,24 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 import '../App.css'
 import Comment from "./ModelsCreateComment";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import Post from "../components/post/Post";
+import ModelsComment from "./ModelsComment";
 
 function ModelsPost(props) {
 
+    const isConnect = useRef();
+    const tokenSet = (localStorage.getItem('token') !== null);
+
     const [comm, setComm] = useState()
+
+    useEffect(() => {
+        Post
+    }, []);
+
+
+
+
 
     const popover = (
         <Popover id="popover-basic" className="contenairajoutcomm">
@@ -18,14 +31,14 @@ function ModelsPost(props) {
                     setComm(e.target.value)
                 }} placeholder="Ici votre commentaire" ></input>
                 <div className="contenairbtnsend">
-                    <button onClick={() => { DisplayComm() }} className="btnsend">Send</button>
+                    <button onClick={() => { DisplayComm() }} className="btnsend">Envoyer</button>
                 </div>
             </Popover.Body>
         </Popover >
     );
 
     function DisplayComm() {
-        console.log("test")
+        console.log("Envoie de Commentaire en cours...")
         Comment(comm, props.id)
     }
 
@@ -41,12 +54,11 @@ function ModelsPost(props) {
                 </Card.Text>
                 <Card.Footer className="text-muted roboto20">Message de {props.lastname} le {props.date}</Card.Footer>
                 <br></br>
-                <h6>Commentaire:</h6>
-                <div className="commutilisateur">{props.comments}</div>
+                <ModelsComment />
             </Card.Body>
             <div className="btncommdisplay">
                 <OverlayTrigger trigger="click" placement="right" overlay={popover}>
-                    <Button variant="success" type="submit" className="btncomm">Commentaire</Button>
+                    <Button variant="success" ref={isConnect} type="submit" className="btncomm">Commentaire</Button>
                 </OverlayTrigger>
             </div>
         </Card>

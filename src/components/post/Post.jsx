@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import moment from "moment";
 import 'moment/dist/locale/fr';
 import 'moment/locale/fr';
+import ModelsComment from "../../models/ModelsComment";
 
 
 
@@ -22,6 +23,7 @@ function Post() {
     useEffect(() => { Post1() }, []);
     const RenderMyArray = () => {
 
+
         return post.map((item, id) => {
 
             return (
@@ -30,7 +32,17 @@ function Post() {
 
                     <ModelsPost id={item._id} key={id} title={item.title} post={item.content} lastname={item.lastname} date={moment(item.date).format("LL")}
 
-                        comments={item.comments.map((item, id))} />
+                        comments={item.comments.map((item, id) => {
+                            return (
+                                <div>
+                                    <ModelsComment key={id} firstname={item.firstname} content={item.content} likes={item.likes} />
+                                </div>
+                            );
+                        }
+                        )}
+
+
+                    />
                 </div>
             );
         }
