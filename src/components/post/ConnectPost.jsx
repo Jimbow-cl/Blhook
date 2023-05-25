@@ -40,7 +40,7 @@ function ConnectPost() {
 
             return (
                 <div>
-                    <ModelsPost key={id} title={item.title} post={item.content} lastname={item.lastname} date={moment(item.date).format("LL")} />
+                    <ModelsPost id={item._id} key={id} title={item.title} post={item.content} lastname={item.lastname} date={moment(item.date).format("LL")} />
                 </div>
             );
         }
@@ -49,7 +49,7 @@ function ConnectPost() {
 
     };
     return (
-        <div className='d-flex align'> <RenderMyArray /></div>
+        <div className='d-flex flex-column align poste'> <RenderMyArray /></div>
 
     );
 

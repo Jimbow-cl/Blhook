@@ -51,6 +51,14 @@
     ;
 }
 
+.poste {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-height: 700px;
+    overflow: scroll;
+}
+
 .flexform {
     display: flex;
     flex-direction: column;
@@ -107,6 +115,7 @@
 
     gap: 30px;
 }
+
 
 /* Page comm sur post */
 
@@ -186,9 +195,8 @@
     ;
 }
 
-.post {
-    border-style: hidden;
-}
+
+
 
 
 

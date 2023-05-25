@@ -35,8 +35,8 @@ function Menu() {
     }
     useEffect(() => { Display() },)
     return (
-        <div className="col-2  colorWhite  bkgColorBlack imgBkg  ">
-            <div className="row m-3 align h-10  borderOrange bkgColorGrey ">
+        <div className="col  colorWhite  bkgColorBlack imgBkg  ">
+            <div className="row m-3 align  borderOrange bkgColorGrey ">
                 <div className="col align"><img src="./src/assets/icon/profil.png" style={{ width: "78px" }} /></div>
                 <div className="col user">
                     <div className="row roboto20"><p>Bienvenue</p></div>
@@ -50,31 +50,31 @@ function Menu() {
                     <p className='align'>Menu</p>
                 </div>
                 <div className="row mt-5">
-                    <Link className="align a " to="/"><Button className="w-75" variant="warning"><img src="./src/assets/icon/home.png" style={{ width: "30px", marginRight: "30px" }} />Home</Button>{' '}</Link>
+                    <Link className="align a " to="/"><Button className="w-7" variant="warning"><img src="./src/assets/icon/home.png" style={{ width: "30px", marginRight: "30px" }} />Home</Button>{' '}</Link>
                 </div>
                 <div className="row mt-5 " >
-                    <Link className="align a" to="/Create"><Button ref={create} className="w-75" variant="primary"><img src="./src/assets/icon/note.png" style={{ width: "30px", marginRight: "30px" }} />Creer compte</Button>{' '}</Link>
-                    <Link className="align a" to="/Profil"><Button ref={profil} className="w-75" variant="primary"><img src="./src/assets/icon/man.png" style={{ width: "30px", marginRight: "30px" }} />Profil</Button>{' '}</Link>
+                    <Link className="align a" to="/Create"><Button ref={create} variant="primary"><img src="./src/assets/icon/note.png" style={{ width: "30px", marginRight: "30px" }} />Creer compte</Button>{' '}</Link>
+                    <Link className="align a" to="/Profil"><Button ref={profil} variant="primary"><img src="./src/assets/icon/man.png" style={{ width: "30px", marginRight: "30px" }} />Profil</Button>{' '}</Link>
 
                 </div>
                 <div className="row mt-5 ">
-                    <Link className="align a" to="/Post"><Button className="w-75" variant="warning"><img src="./src/assets/icon/terre.png" style={{ width: "30px", marginRight: "30px" }} />Post&apos;Book</Button>{' '}</Link>
+                    <Link className="align a" to="/Post"><Button variant="warning"><img src="./src/assets/icon/terre.png" style={{ width: "30px", marginRight: "30px" }} />Post&apos;Book</Button>{' '}</Link>
                 </div>
 
                 <div className="row mt-5 ">
-                    <Link className="align a" to="/ConnectPost"><Button ref={vosposts} className="w-75" variant="warning"><img src="./src/assets/icon/comm.png" style={{ width: "30px", marginRight: "30px" }} />Vos Posts</Button>{' '}</Link>
-                    <Link className="align a" to="/"><Button ref={vosposts2} className="w-75" variant="warning"><img src="./src/assets/icon/robot.png" style={{ width: "30px", marginRight: "30px" }} />Lorem Ipsum</Button>{' '}</Link>
+                    <Link className="align a" to="/ConnectPost"><Button ref={vosposts} c variant="warning"><img src="./src/assets/icon/comm.png" style={{ width: "30px", marginRight: "30px" }} />Vos Posts</Button>{' '}</Link>
+                    <Link className="align a" to="/"><Button ref={vosposts2} variant="warning"><img src="./src/assets/icon/robot.png" style={{ width: "30px", marginRight: "30px" }} />Lorem Ipsum</Button>{' '}</Link>
 
                 </div>
                 <div className="row mt-5 ">
-                    <Link className="align a" to="/Connect"><Button ref={connect} className="w-75" variant="success"><img src="./src/assets/icon/log.png" style={{ width: "30px", marginRight: "30px" }} />Connexion</Button>{' '}</Link>
-                    <Link className="align a" to="/Disconnect"><Button ref={disconnect} className="w-75" onClick={Disconnect} variant="danger"><img src="./src/assets/icon/delog.png" style={{ width: "30px", marginRight: "30px" }} />Déconnexion</Button>{' '}</Link>
+                    <Link className="align a" to="/Connect"><Button ref={connect} variant="success"><img src="./src/assets/icon/log.png" style={{ width: "30px", marginRight: "30px" }} />Connexion</Button>{' '}</Link>
+                    <Link className="align a" to="/Disconnect"><Button ref={disconnect} onClick={Disconnect} variant="danger"><img src="./src/assets/icon/delog.png" style={{ width: "30px", marginRight: "30px" }} />Déconnexion</Button>{' '}</Link>
 
                 </div>
 
 
                 <div className="row mt-5 ">
-                    <Link className="align a" to="/Contact"><Button className="w-75" variant="info">Nous contacter</Button>{' '}</Link>
+                    <Link className="align a" to="/Contact"><Button variant="info">Nous contacter</Button>{' '}</Link>
                 </div>
 
             </nav>

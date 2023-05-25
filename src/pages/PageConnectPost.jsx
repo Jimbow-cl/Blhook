@@ -10,7 +10,7 @@ function PageConnectPost() {
 
     return (
 
-        <div className="container-fluid vh-100">
+        <div className="container-fluid ">
             {/*Header*/}
             <Header />
             <div className='row '>

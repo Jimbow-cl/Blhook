@@ -9,17 +9,17 @@ function PageCreate() {
 
     return (
 
-        <div className="container-fluid vh-100 ">
+        <div className="container-fluid">
             {/*Header*/}
             <Header />
 
-            <div className='row h945 '>
+            <div className='row'>
                 {/*Colonne de Gauche, Menu*/}
                 <Menu />
                 {/*Colonne de Droite, Contenu*/}
                 <div className='col-10 bkgColorBisque'>
-                    <div className="row lh-50"></div>
-                    <div className="row lh-50"></div>
+                    <div className="row"></div>
+                    <div className="row"></div>
 
                     <div className="row">
                         <Create />

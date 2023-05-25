@@ -25,17 +25,20 @@ function Post() {
         return post.map((item, id) => {
 
             return (
+
                 <div>
-                    <ModelsPost key={id} title={item.title} post={item.content} lastname={item.lastname} date={moment(item.date).format("LL")} />
+
+                    <ModelsPost id={item._id} key={id} title={item.title} post={item.content} lastname={item.lastname} date={moment(item.date).format("LL")} comments={item.comments} />
                 </div>
             );
         }
+
         );
 
 
     };
     return (
-        <div className='d-flex align'> <RenderMyArray /></div>
+        <div className='d-flex align poste flex-column'> <RenderMyArray /></div>
 
     );
 
