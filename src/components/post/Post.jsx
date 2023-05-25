@@ -28,14 +28,14 @@ function Post() {
 
                 <div>
 
-                    <ModelsPost id={item._id} key={id} title={item.title} post={item.content} lastname={item.lastname} date={moment(item.date).format("LL")} comments={item.comments} />
+                    <ModelsPost id={item._id} key={id} title={item.title} post={item.content} lastname={item.lastname} date={moment(item.date).format("LL")}
+
+                        comments={item.comments.map((item, id))} />
                 </div>
             );
         }
 
         );
-
-
     };
     return (
         <div className='d-flex align poste flex-column'> <RenderMyArray /></div>

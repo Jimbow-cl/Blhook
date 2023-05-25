@@ -27,9 +27,6 @@ function ModelsPost(props) {
     function DisplayComm() {
         console.log("test")
         Comment(comm, props.id)
-
-
-
     }
 
 
