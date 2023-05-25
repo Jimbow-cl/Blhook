@@ -4,10 +4,6 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 import '../App.css'
 import { useEffect,useState } from "react";
-import Disconnect from "../user/Disconnect";
-
-
-
 
 function ModelsPost(props) {
     const [comm, setComm] = useState();
@@ -15,14 +11,6 @@ function ModelsPost(props) {
 
     const [like, setLike] = useState(0);
     const [historiqueLike, setHistoriqueLike] = useState([]);
-    
-    //const user = JSON.parse(localStorage.getItem("user"));
-
-    //useEffect(() => {
-      //TokenStorage(setHistoriqueLike)
- // }, [])
-
- 
 
     
     const btnclick = async() =>{ 
@@ -31,7 +19,7 @@ function ModelsPost(props) {
             method: "POST",
             headers: {
                 "Content-Type": "application/json", 
-                "Authorization": "bearer $"
+                "Authorization": "bearer token"
             },
             body: JSON.stringify({
                 postld: postld,
@@ -51,62 +39,41 @@ function ModelsPost(props) {
     }
 
     useEffect (()=> { }, []);
-
     
-  async function ajoutLike(){
-        let postLike = {
+    async function btnLike() {
+
+        const postLike = {
             method: "POST",
             headers: {
             "Content-Type": "application/json",
             "Authorization": "bearer token"
             },
-
             body: JSON.stringify({
+            postId: postId,
             })
             };
 
-            let response = await fetch("https://social-network-api.osc-fr1.scalingo.io/theBlhook/post/like", postLike);
-            console.log(response)
-            //accepte url de l'api comme paramètre
-            document.getElementById("like")
+
+            const response = await fetch("https://social-network-api.osc-fr1.scalingo.io/theBlhook/post/like", postLike);
+            const data = await response.json()
+
+
             
-            .then(response => response.json())
-            .then(data=>this.setHistoriqueLike({postld:data.id}))
+          }
 
+          useEffect (()=> { }, []);
 
-            //si la methode fetch() est resolve càd si promesse bien
-            //envoyée alors cette fonction ci dessur contien le
-            //code qui permet de trairer les donéees reçues
-
-            //.catch(function() {});
+          console.log("ok");
+          setLike((like) => like + 1)
+          console.log(like)
+          //setHistoriqueLike([...historiqueLike, like]);
+          //console.log("tableau", historiqueLike);
+          setHistoriqueLike(data);
+          console.log(historiqueLike)
+          const token = historiqueLike.token
+          localStorage.setItem("token", JSON.stringify(token))
+  
           
-            //la méthode catch sert si l'api est défaillante
-            //le code catch s'exécute en cas de rejet
-
-            let data = await response.json();
-console.log('test',data);
-             setHistoriqueLike(data);
-           
-            console.log(historiqueLike)
-    
-     let token = like.token
-     localStorage.setItem("token", JSON.stringify(token))
-
-    }
-
-  
-    const buttonlike = () => {
-      console.log("ok");
-      setLike((like) => like + 1)
-      console.log(like)
-      //setHistoriqueLike([...historiqueLike, like]);
-      console.log("tableau", historiqueLike);
-     
-      ajoutLike()
-    
-    };
-  
-     
     const popover = (
         <Popover id="popover-basic" className="contenairajoutcomm">
           <Popover.Header as="h3" className="titlecomm">Ajoute un commentaire:</Popover.Header>
@@ -114,11 +81,12 @@ console.log('test',data);
            <input  type="textarea"  className="inputcomm" ></input>
            <div className="contenairbtnsend">
                 <button onClick={btnclick} className="btnsend">Send</button>
+
            </div>
           </Popover.Body>
         </Popover>
       );
-//{user}
+
 
     return (
 
@@ -138,11 +106,10 @@ console.log('test',data);
                     <Button variant="success" className="btncomm">Commentaire</Button>
                 </OverlayTrigger>
             </div>
-      <p onClick={buttonlike}className="like">👍</p>
 
             {" "}
+      <button onClick={btnLike}className="btncomm">👍</button>
       <p>{like}</p>
-     <ul id="like"></ul>
       <strong>
        
 

@@ -2,6 +2,11 @@ import { Form, Button } from "react-bootstrap"
 
 
 function Contact() {
+
+
+    function Alert() {
+
+    }
     return (
         <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -16,7 +21,7 @@ function Contact() {
             </Form.Group>
 
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" onClick={Alert} type="submit">
                 Envoyer
             </Button>
         </Form>
