@@ -62,7 +62,7 @@ function Menu() {
                 </div>
 
                 <div className="row mt-5 ">
-                    <Link className="align a" to="/ConnectPost"><Button ref={vosposts} c variant="warning"><img src="./src/assets/icon/comm.png" style={{ width: "30px", marginRight: "30px" }} />Vos Posts</Button>{' '}</Link>
+                    <Link className="align a" to="/ConnectPost"><Button ref={vosposts} c variant="warning"><img src="./src/assets/icon/comm.png" style={{ width: "30px", marginRight: "30px" }} />Vos Blhooks</Button>{' '}</Link>
                     <Link className="align a" to="/"><Button ref={vosposts2} variant="warning"><img src="./src/assets/icon/robot.png" style={{ width: "30px", marginRight: "30px" }} />Lorem Ipsum</Button>{' '}</Link>
 
                 </div>

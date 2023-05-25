@@ -64,7 +64,7 @@ function ConnectPost() {
 
     };
     return (
-        <div className='d-flex flex-column align poste'> <RenderMyArray /></div>
+        <div className=' poste'> <RenderMyArray /></div>
 
     );
 

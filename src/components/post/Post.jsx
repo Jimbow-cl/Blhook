@@ -50,7 +50,7 @@ function Post() {
         );
     };
     return (
-        <div className='d-flex align poste flex-column'> <RenderMyArray /></div>
+        <div className=' poste' > <RenderMyArray /></div>
 
     );
 

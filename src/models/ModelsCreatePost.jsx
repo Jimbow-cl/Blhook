@@ -2,7 +2,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Form } from 'react-bootstrap';
 import '../App.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Post from '../components/post/Post';
 
 
 
@@ -11,6 +12,7 @@ function ModelsCP() {
   const token = JSON.parse(localStorage.getItem("token"));
   const [title, setTitle] = useState();
   const [content, setContent] = useState();
+
 
 
   function Publier() {
@@ -39,14 +41,15 @@ function ModelsCP() {
 
 
   return (
-    <Card>
+    <Card style={{ width: '70%' }}>
       <Card.Header>Ajouter un post</Card.Header>
-      <Card.Body>
+      <Card.Body className="d-flex flex-column align-items-sm-center">
         <Card.Title>Titre de votre post</Card.Title>
-        <Form.Control type="text" onChange={(e) => setTitle(e.target.value)} placeholder="Titre" />
+        <Form.Control type="text" onChange={(e) => setTitle(e.target.value)} default maxLength="10" placeholder="Titre" />
         <Card.Title>Texte</Card.Title>
-        <Form.Control type="text" onChange={(e) => setContent(e.target.value)} placeholder="Votre texte" />
-        <Button variant="success" onClick={Publier}>Publier</Button>
+        <Form.Control type="text" onChange={(e) => setContent(e.target.value)} maxLength="70" placeholder="Votre texte" />
+        <Card.Title></Card.Title>
+        <Button className="align" style={{ width: '70%' }} variant="success" onClick={Publier}>Publier</Button>
       </Card.Body>
     </Card>
   );

@@ -12,14 +12,14 @@ function Header() {
 
     return (
 
-        <div className='row  d-flex bkgColorOrange '>
+        <div className='row pding-13  bkgColorBlack   '>
             <header>
                 <div className='row'>
                     {/*Logo The Blhook*/}
-                    <div className='col-2  align  colorGrey roboto36'><img className='lh-41' src='./public/logoBlhook.png' /><p>The Blhook</p></div>
-                    <div className='col-4  align  colorGrey roboto36'></div>
-                    <div className='col-3  align  colorGrey roboto36'><p> Nous sommes le {moment().format('LL')}  </p></div>
-                    <div className='col-3  align  ccolorGrey roboto36' id="timer"> <Timer /></div>
+                    <div className='col-2  align  colorWhite roboto36'><img className='lh-41' src='./public/logoBlhook.png' /><p>The Blhook</p></div>
+                    <div className='col-3  align  colorWHite roboto36'></div>
+                    <div className='col-4  align  colorWhite roboto36'><p> Nous sommes le {moment().format('LL')}  </p></div>
+                    <div className='col-3  align  colorWhite roboto36' id="timer"> <Timer /></div>
 
                 </div>
 

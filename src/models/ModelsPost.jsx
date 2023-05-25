@@ -6,7 +6,7 @@ import '../App.css'
 import Comment from "./ModelsCreateComment";
 import { useEffect, useState, useRef } from "react";
 import Post from "../components/post/Post";
-import ModelsComment from "./ModelsComment";
+import Accordion from 'react-bootstrap/Accordion';
 
 function ModelsPost(props) {
 
@@ -27,9 +27,9 @@ function ModelsPost(props) {
         <Popover id="popover-basic" className="contenairajoutcomm">
             <Popover.Header as="h3" className="titlecomm">Ajoute un commentaire:</Popover.Header>
             <Popover.Body >
-                <input type="textarea" className="inputcomm" onChange={(e) => {
+                <input type="textarea" className="inputcomm" maxLength="30" onChange={(e) => {
                     setComm(e.target.value)
-                }} placeholder="Ici votre commentaire" ></input>
+                }} placeholder="30 caractères max" ></input>
                 <div className="contenairbtnsend">
                     <button onClick={() => { DisplayComm() }} className="btnsend">Envoyer</button>
                 </div>
@@ -46,7 +46,7 @@ function ModelsPost(props) {
 
     return (
 
-        <Card className="align" body style={{ width: '450px' }}>
+        <Card className="align mh" body style={{ width: '450px' }}>
             <Card.Title className="align roboto36bold">{props.title}</Card.Title>
             <Card.Body>
                 <Card.Text className="roboto20">
@@ -54,7 +54,14 @@ function ModelsPost(props) {
                 </Card.Text>
                 <Card.Footer className="text-muted roboto20">Message de {props.lastname} le {props.date}</Card.Footer>
                 <br></br>
-                <div>{props.comments}</div>
+                <Accordion flush>
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header>Commentaire</Accordion.Header>
+                        <Accordion.Body>
+                            {props.comments}
+                        </Accordion.Body>
+                    </Accordion.Item>
+                </Accordion>
             </Card.Body>
             <div className="btncommdisplay">
                 <OverlayTrigger trigger="click" placement="right" overlay={popover}>
