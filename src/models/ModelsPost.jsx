@@ -5,7 +5,7 @@ import Popover from 'react-bootstrap/Popover';
 import '../App.css'
 import { useEffect,useState } from "react";
 import Disconnect from "../user/Disconnect";
-
+import Likes from "../components/post/likes";
 
 
 
@@ -16,6 +16,7 @@ function ModelsPost(props) {
     const [like, setLike] = useState(0);
     const [historiqueLike, setHistoriqueLike] = useState([]);
     
+    Likes ()
     //const user = JSON.parse(localStorage.getItem("user"));
 
     //useEffect(() => {
@@ -64,27 +65,26 @@ function ModelsPost(props) {
             body: JSON.stringify({
             })
             };
-
             let response = await fetch("https://social-network-api.osc-fr1.scalingo.io/theBlhook/post/like", postLike);
             console.log(response)
             //accepte url de l'api comme paramètre
-            document.getElementById("like")
+            let ul = document.getElementById("like")
             
             .then(response => response.json())
-            .then(data=>this.setHistoriqueLike({postld:data.id}))
-
+            .this(data=>this.setHistoriqueLike({postld:data.id}))
+            console.log(data);
 
             //si la methode fetch() est resolve càd si promesse bien
             //envoyée alors cette fonction ci dessur contien le
             //code qui permet de trairer les donéees reçues
 
             //.catch(function() {});
-          
+        
             //la méthode catch sert si l'api est défaillante
             //le code catch s'exécute en cas de rejet
 
             let data = await response.json();
-console.log('test',data);
+            console.log('test',data);
              setHistoriqueLike(data);
            
             console.log(historiqueLike)

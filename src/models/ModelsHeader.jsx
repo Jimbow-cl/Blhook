@@ -12,14 +12,14 @@ function Header() {
 
     return (
 
-        <div className='row lh-50 bkgColorOrange '>
+        <div className='row  d-flex bkgColorOrange '>
             <header>
                 <div className='row'>
                     {/*Logo The Blhook*/}
-                    <div className='col-2 lh-50 align gap-5 colorGrey roboto36'><img className='lh-41' src='./public/logoBlhook.png' /><p>The Blhook</p></div>
-                    <div className='col-4 lh-50 align gap-5 colorGrey roboto36'></div>
-                    <div className='col-3 lh-50 align gap-5 colorGrey roboto36'><p> Nous sommes le {moment().format('LL')}  </p></div>
-                    <div className='col-3 lh-50 align gap-5 ccolorGrey roboto36' id="timer"> <Timer /></div>
+                    <div className='col-2  align  colorGrey roboto36'><img className='lh-41' src='./public/logoBlhook.png' /><p>The Blhook</p></div>
+                    <div className='col-4  align  colorGrey roboto36'></div>
+                    <div className='col-3  align  colorGrey roboto36'><p> Nous sommes le {moment().format('LL')}  </p></div>
+                    <div className='col-3  align  ccolorGrey roboto36' id="timer"> <Timer /></div>
 
                 </div>
 
