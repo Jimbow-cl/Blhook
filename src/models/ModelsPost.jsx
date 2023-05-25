@@ -5,7 +5,7 @@ import Popover from 'react-bootstrap/Popover';
 import '../App.css'
 import { useEffect,useState } from "react";
 import Disconnect from "../user/Disconnect";
-import Likes from "../components/post/likes";
+
 
 
 
@@ -16,7 +16,6 @@ function ModelsPost(props) {
     const [like, setLike] = useState(0);
     const [historiqueLike, setHistoriqueLike] = useState([]);
     
-    Likes ()
     //const user = JSON.parse(localStorage.getItem("user"));
 
     //useEffect(() => {
@@ -84,7 +83,7 @@ function ModelsPost(props) {
             //le code catch s'exécute en cas de rejet
 
             let data = await response.json();
-            console.log('test',data);
+console.log('test',data);
              setHistoriqueLike(data);
            
             console.log(historiqueLike)
