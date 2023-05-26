@@ -1,6 +1,6 @@
+// Récuperation de l'Api, pour mise en local Storage
 
 async function LocalStorage() {
-  // "En attente pour le developpement, token du compte admin"
   const token = JSON.parse(localStorage.getItem("token"));
   console.log("token", token);
   var check = (localStorage.getItem('check'));

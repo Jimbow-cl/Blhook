@@ -2,11 +2,9 @@ import { Form, Button } from "react-bootstrap"
 
 
 function Contact() {
+    // Formulaire de contact
 
 
-    function Alert() {
-
-    }
     return (
         <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">

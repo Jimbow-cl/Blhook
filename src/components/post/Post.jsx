@@ -5,6 +5,7 @@ import 'moment/dist/locale/fr';
 import 'moment/locale/fr';
 import ModelsComment from "../../models/ModelsComment";
 
+// Fetch d'affichage de post et de comment
 
 
 function Post() {

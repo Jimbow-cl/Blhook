@@ -53,7 +53,7 @@ function Connexion() {
   return (
     <div className="align-items-center">
       <Container className="d-flex justify-content-center">
-        <Row className="vh-100 d-flex justify-content-center align-items-center">
+        <Row className=" d-flex justify-content-center align-items-center">
           <Col >
             <div className="border border-3 border-primary"></div>
             <Card className="shadow">

@@ -1,5 +1,7 @@
+// Récuperation des info User, avant possibilité de modification 
+
 const TokenStorage = async (setUser) => {
-  // "En attente pour le developpement, token du compte admin"
+
   const token = JSON.parse(localStorage.getItem("token"));
   console.log("token", token);
 

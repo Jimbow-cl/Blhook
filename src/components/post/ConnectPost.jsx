@@ -6,7 +6,7 @@ import 'moment/dist/locale/fr';
 import 'moment/locale/fr';
 
 
-// Conposant de tri des postes d'un utilisateur
+// Fetch d'affichage de  Post
 
 function ConnectPost() {
 
