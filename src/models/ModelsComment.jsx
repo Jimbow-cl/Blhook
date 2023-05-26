@@ -8,7 +8,7 @@ function ModelsComment(props) {
             <div className="commutilisateur d-flex flex-column">
                 <span className="roboto20"><img className="mx-5" src="src/assets/icon/man.png" style={{ width: "20px" }} />{props.firstname}</span>
                 <span><img className="mx-5" src="src/assets/icon/note.png" style={{ width: "20px" }} />{props.content}</span>
-                <span className="roboto20"> <img className="mx-5" src="src/assets/icon/like.png" style={{ width: "20px" }} />{props.likes}</span>
+                <span className="roboto20"> <img className="mx-5" src="src/assets/icon/like.png" style={{ width: "20px" }} />{props.likes.length}</span>
             </div>
         </Accordion.Body>
     )

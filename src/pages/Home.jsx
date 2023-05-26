@@ -23,7 +23,7 @@ function Home() {
                 <Menu />
                 {/*Colonne de Droite, Contenu*/}
                 <div className='col-10 bkgColorBisque'>
-                    <div className="row"></div>
+                    <div className="row h-10"></div>
                     <div className="row"></div>
 
                     <div className="row">

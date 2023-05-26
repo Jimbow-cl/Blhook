@@ -43,6 +43,11 @@ function Create() {
         setContact2(data);
         console.log(contact2);
 
+        if (data.success == true) {
+            window.location = "/";
+
+        }
+
 
     }
 

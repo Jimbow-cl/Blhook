@@ -21,7 +21,7 @@ function PageConnectPost() {
                 <div className='col-10 bkgColorBisque'>
                     <div className="publierunpost">Publier un post</div>
                     <div className="row align m-bb"><ModelsCP /></div>
-                    <div className="row  overflow ">
+                    <div className="row   ">
                         <ConnectPost />
                     </div>
 

@@ -11,14 +11,14 @@ import Accordion from 'react-bootstrap/Accordion';
 function ModelsPost(props) {
 
     const isConnect = useRef();
-    const tokenSet = (localStorage.getItem('token') !== null);
+    const tokenSet = (localStorage.getItem('token'));
 
     const [comm, setComm] = useState()
 
     useEffect(() => {
         Post
+        Connect()
     }, []);
-
 
 
 
@@ -30,7 +30,7 @@ function ModelsPost(props) {
                 <input type="textarea" className="inputcomm" maxLength="30" onChange={(e) => {
                     setComm(e.target.value)
                 }} placeholder="30 caractères max" ></input>
-                <div className="contenairbtnsend">
+                <div ref={isConnect} className="contenairbtnsend">
                     <button onClick={() => { DisplayComm() }} className="btnsend">Envoyer</button>
                 </div>
             </Popover.Body>
@@ -40,6 +40,14 @@ function ModelsPost(props) {
     function DisplayComm() {
         console.log("Envoie de Commentaire en cours...")
         Comment(comm, props.id)
+    }
+
+    function Connect() {
+        if (tokenSet) {
+            isConnect.current.style.display = "block"
+        }
+        else { isConnect.current.style.display = "none" }
+
     }
 
 
