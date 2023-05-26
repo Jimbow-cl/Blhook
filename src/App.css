@@ -1,0 +1,230 @@
+/* Roboto:*/
+.roboto48 {
+    font-size: 48px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+
+}
+
+.roboto36 {
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.roboto36bold {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.roboto20 {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.roboto20bold {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* Taille */
+.lh-50 {
+    height: 50px;
+}
+
+.lh-41 {
+    height: 41px;
+}
+
+.h-10 {
+    height: 10%
+}
+
+.h945 {
+    height: 94.5vh;
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+
+}
+
+.poste {
+    display: flex;
+    margin: 10px 10px 10px -28px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.flexform {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/* Color*/
+.bkgColorBlack {
+    background-color: #2e302f;
+}
+
+.bkgColorOrange {
+    background-color: #e2ba8f;
+}
+
+.imgBkg {
+    background-image: url(/public/logoBlhook\ Tran.png);
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-position: 123px 463px;
+    background-size: 113%;
+}
+
+.bkgColorBisque {
+    background-color: #e0dede;
+}
+
+.bkgColorGrey {
+    background-color: #424443;
+}
+
+.colorWhite {
+    color: #ff6600;
+}
+
+/* border*/
+
+.borderb {
+    border-bottom: 3px solid rgb(248, 101, 3);
+}
+
+.borderOrange {
+    border: orange solid 1px
+}
+
+/* Decoration*/
+
+.a {
+    text-decoration: none;
+}
+
+.weather {
+
+    gap: 30px;
+}
+
+.pding-13 {
+    padding-left: 13px;
+    margin-left: 0px;
+}
+
+/* Page comm sur post */
+
+.btncommdisplay {
+    display: flex;
+    justify-content: center;
+    padding: 5% 0% 3% 0%;
+}
+
+.btncomm {
+    background-color: #e2ba8f;
+    border: #e2ba8f;
+}
+
+.btncomm:hover {
+    background-color: #e09646;
+    color: #fbfbfb;
+}
+
+.titlecomm {
+    background-color: #424443;
+    color: #e0dede;
+}
+
+.contenairajoutcomm {
+    border-color: #e2ba8f;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.contenairbtnsend {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.btnsend {
+    background-color: #f97924;
+    color: #e0dede;
+    border-color: #f97924;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+}
+
+.btnsend:hover {
+    background-color: #ff5100;
+    border-color: #ff5100;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+}
+
+.commutilisateur {
+    background-color: #f5f4f4b4;
+    padding: 2% 2% 2% 2%;
+}
+
+
+
+/* Page Publier un post */
+
+.publierunpost {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: #424443;
+    padding: 1% 0% 1% 0%;
+    border-bottom-style: solid;
+    border-width: 1px 2px 3px 4px;
+    margin: 0% 20% 2% 20%;
+}
+
+
+
+
+
+
+
+.m-bb {
+
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.buttoncp:hover {
+    background-color: rgb(43, 161, 229);
+    color: #ffffff;
+    border-color: rgb(74, 138, 113);
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mh {
+    margin: 5px 5px 5px 5px;
+    min-height: 400px;
+}
