@@ -10,17 +10,10 @@ import Accordion from 'react-bootstrap/Accordion';
 
 function ModelsPost(props) {
 
-    const isConnect = useRef();
-    const tokenSet = (localStorage.getItem('token'));
+    const overlayRef = useRef();
+    const tokenSet = localStorage.getItem('token') !== null;
 
     const [comm, setComm] = useState()
-
-    useEffect(() => {
-        Post
-        Connect()
-    }, []);
-
-
 
 
     const popover = (
@@ -30,8 +23,8 @@ function ModelsPost(props) {
                 <input type="textarea" className="inputcomm" maxLength="30" onChange={(e) => {
                     setComm(e.target.value)
                 }} placeholder="30 caractères max" ></input>
-                <div ref={isConnect} className="contenairbtnsend">
-                    <button onClick={() => { DisplayComm() }} className="btnsend">Envoyer</button>
+                <div className="contenairbtnsend">
+                    <button onClick={() => { DisplayComm(); console.log(overlayRef.current); }} className="btnsend">Envoyer</button>
                 </div>
             </Popover.Body>
         </Popover >
@@ -40,14 +33,6 @@ function ModelsPost(props) {
     function DisplayComm() {
         console.log("Envoie de Commentaire en cours...")
         Comment(comm, props.id)
-    }
-
-    function Connect() {
-        if (tokenSet) {
-            isConnect.current.style.display = "block"
-        }
-        else { isConnect.current.style.display = "none" }
-
     }
 
 
@@ -72,8 +57,8 @@ function ModelsPost(props) {
                 </Accordion>
             </Card.Body>
             <div className="btncommdisplay">
-                <OverlayTrigger trigger="click" placement="right" overlay={popover}>
-                    <Button variant="success" ref={isConnect} type="submit" className="btncomm">Commentaire</Button>
+                <OverlayTrigger ref={overlayRef} trigger="click" placement="right" overlay={popover}>
+                    {tokenSet && <Button variant="success"  type="submit" className="btncomm">Commentaire</Button>}
                 </OverlayTrigger>
             </div>
         </Card>
